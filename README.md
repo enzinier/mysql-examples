@@ -2,10 +2,11 @@
 
 This repository is docker image for MySQL sample database(sakila, world).
 
-All of commands same with official mysql docker.
+All of options same with official mysql docker.
 
 If you want to initialize additional database, you can add sql file to initialize_sql directory.
 
+You can mount initialized_sql directory with option like '-v $(pwd)/my_sql:/tmp/initialized_sql'.
 
 ## Build
 
