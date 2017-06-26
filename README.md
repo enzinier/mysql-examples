@@ -1,4 +1,4 @@
-# MySQL Example Docker
+# MySQL Sample Docker
 
 This repository is docker image for MySQL sample database(sakila, world).
 
@@ -9,9 +9,9 @@ If you want to initilize additional database, you can add sql file to initialize
 
 ## Build
 
-`docker build -t mysql-example .`
+`docker build -t mysql-sample .`
 
 
 ## Run
 
-`docker run --rm -p 3306:3306 -e MYSQL_ROOT_PASSWORD=local --name mysql-local mysql-example`
+`docker run --rm -p 3306:3306 -e MYSQL_ROOT_PASSWORD=local --name mysql-local mysql-sample`
