@@ -1,0 +1,25 @@
+version: "3"
+services:
+  db-master:
+    build:
+      context: .
+      args:
+        config_name: master
+    image: mysql-sample-master
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: local
+
+  db-slave:
+    build:
+      context: .
+      args:
+        config_name: slave
+    image: mysql-sample-slave
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: local
+    depends_on:
+      - db-master

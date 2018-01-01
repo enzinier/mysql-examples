@@ -1,0 +1,20 @@
+[client]
+default-character-set = utf8 
+port = 3306
+
+[mysql] 
+default-character-set = utf8
+no-auto-rehash
+connect_timeout=2
+
+[mysqld]
+port = 3306
+max_connect_errors = 999999999
+
+character-set-client-handshake = FALSE 
+character-set-server = utf8
+
+bind-address = 0.0.0.0
+
+log-bin=mysql-bin
+server-id=1

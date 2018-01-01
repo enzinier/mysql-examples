@@ -1,6 +1,7 @@
 FROM mysql:5.7
+ARG config_name=base
 
-COPY config/** /etc/mysql/conf.d/
+COPY config/${config_name}.cnf /etc/mysql/conf.d/
 COPY initialize_sql /tmp/initialize_sql
 
 COPY initialize_db.sh /tmp/
